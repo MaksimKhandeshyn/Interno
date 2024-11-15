@@ -309,3 +309,145 @@ header {
 .comment .comment-list .comment-item .list-text:last-child {
   width: 274px;
 }
+
+.brands-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.projects {
+  padding-top: 113px;
+  padding-bottom: 140px;
+}
+.projects .projects-title {
+  margin-bottom: 20px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 47px;
+  line-height: 1.32766;
+  text-align: center;
+  color: var(--title-color);
+}
+.projects .projects-info {
+  width: 768px;
+  margin: auto;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--info-color);
+}
+.projects .projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  column-gap: 20px;
+  row-gap: 60px;
+}
+.projects .projects-list .projects-item {
+  flex-wrap: calc((100% - 1 * 20px) / 2);
+}
+.projects .projects-list .projects-item .item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+.projects .projects-list .projects-item .item-container .item-title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5625;
+  letter-spacing: 0.01em;
+  color: var(--title-color);
+}
+.projects .projects-list .projects-item .item-container .item-type {
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #4d5053;
+}
+.projects .projects-list .projects-item .item-container .item-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #f4f0ec;
+  border-radius: 50%;
+
+  transition: all 250ms ease-in;
+}
+.projects .projects-list .projects-item .item-container .item-more:hover,
+.more-icon {
+  transform: scale(1.1);
+}
+
+.static {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background: #f4f0ec;
+}
+.static .static-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.static .static-list .static-item {
+  display: flex;
+}
+.static .static-list .static-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 195px;
+  background: var(--main-color);
+  margin: 0 55px;
+}
+.static .static-list span {
+  display: block;
+  margin: 0 100px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 85px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--main-color);
+}
+.static .static-list .static-info {
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--info-color);
+}
+
+.blogs {
+  padding-top: 143px;
+  padding-bottom: 141px;
+}
+.blogs .blogs-title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.3;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--title-color);
+}
+.blogs .blogs-info {
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--info-color);
+}
+.blogs .blogs-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.blogs-item {
+  flex-basis: calc((100% - 2 * 20px) / 3);
+}
