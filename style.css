@@ -11,7 +11,7 @@ body {
   font-size: 20px;
 }
 .container {
-  width: 1230px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
   @media screen and (min-width: 320px) {
@@ -22,6 +22,9 @@ body {
   }
   @media screen and (min-width: 768px) {
     width: 100%;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1230px;
   }
 }
 html {
@@ -79,38 +82,38 @@ header {
 }
 
 .hero {
-  padding-top: 195px;
-  padding-bottom: 260px;
+  padding-top: 150px;
+  padding-bottom: 200px;
   background: url("./images/hero.png") no-repeat center;
   background-size: cover;
-  @media screen and (min-width: 320px) {
-    padding-top: 150px;
-    padding-bottom: 200px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 195px;
+    padding-bottom: 260px;
   }
 }
 .hero .hero-title {
-  width: 595px;
+  width: auto;
   margin-bottom: 20px;
   font-family: var(--second-family);
-  font-size: 80px;
+  font-size: 39px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0em;
   color: var(--title-color);
-  @media screen and (min-width: 320px) {
-    width: auto;
-    font-size: 39px;
+  @media screen and (min-width: 1200px) {
+    width: 595px; /*595. 80*/
+    font-size: 80px;
   }
 }
 .hero .hero-info {
-  width: 577px;
+  width: auto;
   margin-bottom: 35px;
   font-size: 22px;
   line-height: 1.5;
   letter-spacing: 0.01em;
   color: var(--info-color);
-  @media screen and (min-width: 320px) {
-    width: auto;
+  @media screen and (min-width: 1200px) {
+    width: 577px;
   }
 }
 .hero .hero-btn {
@@ -148,16 +151,18 @@ header {
   }
 }
 .design .design-list {
-  display: flex;
+  display: block;
   justify-content: space-between;
-  @media screen and (min-width: 320px) {
-    display: block;
+  @media screen and (min-width: 1200px) {
+    display: flex;
   }
 }
 .design .design-list .design-item {
   flex-basis: calc((100% - 2 * 52px) / 3);
-  @media screen and (min-width: 320px) {
-    margin-top: 20px;
+  margin-top: 20px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
   }
 }
 .design .design-list .design-item .disign-title {
@@ -176,8 +181,10 @@ header {
   letter-spacing: 0.01em;
   text-align: center;
   color: var(--info-color);
-  @media screen and (min-width: 320px) {
-    margin-top: 10px;
+  margin-top: 10px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
   }
 }
 .design .design-list .design-item .design-more {
@@ -190,11 +197,12 @@ header {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--title-color);
+  margin-top: 20px;
 
   transition: all 350ms ease;
 
-  @media screen and (min-width: 320px) {
-    margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 68px;
   }
 }
 .design .design-list .design-item .design-more:hover {
@@ -209,37 +217,38 @@ header {
   padding-bottom: 36px;
 }
 .challenging .container {
-  display: flex;
-  justify-content: space-between;
+  display: block;
 
-  @media screen and (min-width: 320px) {
-    display: block;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
   }
 }
 .challenging .challenging-title {
   width: 450px;
-  margin-bottom: 42px;
+  margin-bottom: 33px;
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 50px;
+  font-size: 33px;
   line-height: 1.3;
   letter-spacing: 0em;
   color: var(--title-color);
 
-  @media screen and (min-width: 320px) {
-    font-size: 33px;
+  @media screen and (min-width: 1200px) {
+    font-size: 45px;
   }
 }
 .challenging .challenging-info {
-  width: 530px;
+  width: auto;
   font-size: 22px;
   line-height: 1.5;
   letter-spacing: 0.01em;
   color: var(--info-color);
+  text-align: center;
 
-  @media screen and (min-width: 320px) {
-    width: auto;
-    text-align: center;
+  @media screen and (min-width: 1200px) {
+    width: 530px;
+    text-align: start;
   }
 }
 .challenging .contact {
@@ -257,10 +266,11 @@ header {
   border-radius: 50%;
   border: none;
   background: #f4f0ec;
-
-  @media screen and (min-width: 320px) {
-    width: 70px;
-    height: 70px;
+  width: 70px;
+  height: 70px;
+  @media screen and (min-width: 1200px) {
+    width: 98px;
+    height: 98px;
   }
 }
 .challenging .contact .contact-wrapper {
@@ -272,9 +282,10 @@ header {
   line-height: 1.5;
   letter-spacing: 0.01em;
   color: var(--info-color);
+  text-align: center;
 
-  @media screen and (min-width: 320px) {
-    text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
   }
 }
 .challenging .contact .contact-wrapper .tell {
@@ -286,7 +297,7 @@ header {
   align-items: center;
   width: 263px;
   height: 71px;
-  margin-top: 60px;
+  margin-top: 30px;
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -294,9 +305,11 @@ header {
   background-color: var(--title-color);
   border-radius: 18px;
   border: 2px solid var(--title-color);
+
   transition: all 350ms ease;
+
   @media screen and (min-width: 320px) {
-    margin-top: 30px;
+    margin-top: 60px;
   }
 }
 .challenging .challenging-container .challenging-btn:hover {
@@ -308,52 +321,73 @@ header {
   margin-left: 16px;
 }
 .challenging .challengeing-img {
-  display: block;
-  @media screen and (min-width: 320px) {
-    display: none;
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
   }
 }
 
 .comment {
-  padding-top: 140px;
-  padding-bottom: 140px;
-  @media screen and (min-width: 320px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
-    outline: 1px grey solid !important;
+  @media screen and (min-width: 1200px) {
+    padding-top: 140px;
+    padding-bottom: 140px;
   }
 }
-.comment .contaner {
-  width: 1200px;
-  padding: 100px 50px 120px;
-  padding-top: 100px;
-  padding-bottom: 120px;
+.comment .comment-contaniner {
   margin: auto;
+  padding: 30px 15px;
   background-color: #f4f0ec;
-  border-radius: 70px;
+  border-radius: 30px;
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding: 100px 50px 120px;
+    border-radius: 70px;
+  }
 }
 .comment .comment-title {
-  width: 479px;
-  margin: auto;
+  width: auto;
   font-family: var(--second-family);
+  font-size: 30px;
   font-weight: 400;
-  font-size: 45px;
   line-height: 1.3;
   letter-spacing: 0em;
   text-align: center;
   color: var(--title-color);
+  @media screen and (min-width: 1200px) {
+    width: 479px;
+    margin: auto;
+    padding-top: 0;
+    font-size: 45px;
+  }
 }
 .comment .comment-list {
-  display: flex;
-  column-gap: 17px;
+  display: block;
   margin-top: 46px;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    column-gap: 17px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .comment .comment-list .comment-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 .comment .comment-list .comment-item {
-  width: 354px;
-  padding: 35px 75px 45px 35px;
+  padding: 25px 15px;
   background-color: #fff;
   border-radius: 30px;
+
+  @media screen and (min-width: 1200px) {
+    width: 354px;
+    height: 289px;
+    padding: 35px 75px 45px 35px;
+  }
 }
 .comment .comment-list .comment-item .item-container {
   display: flex;
@@ -385,11 +419,18 @@ header {
 .comment .comment-list .comment-item .list-text:last-child {
   width: 274px;
 }
-
 .brands-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  row-gap: 50px;
+  outline: 1px grey solid !important;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    row-gap: 0;
+  }
 }
 
 .projects {
