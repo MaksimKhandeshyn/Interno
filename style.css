@@ -35,6 +35,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
 h1,
 h2,
 h3,
@@ -425,7 +426,6 @@ header {
   align-items: center;
   flex-direction: column;
   row-gap: 50px;
-  outline: 1px grey solid !important;
 
   @media screen and (min-width: 1200px) {
     flex-direction: row;
@@ -434,33 +434,50 @@ header {
 }
 
 .projects {
-  padding-top: 113px;
-  padding-bottom: 140px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 113px;
+    padding-bottom: 140px;
+  }
 }
 .projects .projects-title {
   margin-bottom: 20px;
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 47px;
+  font-size: 42px;
   line-height: 1.32766;
   text-align: center;
   color: var(--title-color);
+  @media screen and (min-width: 1200px) {
+    font-size: 47px;
+  }
 }
 .projects .projects-info {
-  width: 768px;
   margin: auto;
-  font-size: 22px;
+  font-size: 25px;
   line-height: 1.5;
   letter-spacing: 0.01em;
   text-align: center;
   color: var(--info-color);
+  @media screen and (min-width: 1200px) {
+    width: 768px;
+    font-size: 22px;
+  }
 }
 .projects .projects-list {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 70px;
-  column-gap: 20px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 60px;
+  margin-top: 70px;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+  }
 }
 .projects .projects-list .projects-item {
   flex-wrap: calc((100% - 1 * 20px) / 2);
@@ -489,12 +506,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 60px;
   background-color: #f4f0ec;
   border-radius: 50%;
 
   transition: all 250ms ease-in;
+  @media screen and (min-width: 1200px) {
+    width: 70px;
+    height: 70px;
+  }
 }
 .item-more:hover,
 .more-icon {
@@ -507,20 +528,32 @@ header {
   background: #f4f0ec;
 }
 .static .static-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .static .static-list .static-item {
-  display: flex;
+  display: block;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 .static .static-list .static-item:not(:last-child)::after {
   content: "";
   display: block;
   width: 1px;
   height: 195px;
+  margin: auto;
   background: var(--main-color);
-  margin: 0 55px;
+  transform: rotate(90deg);
+  @media screen and (min-width: 1200px) {
+    transform: none;
+    margin: 0 55px;
+  }
 }
 .static .static-list span {
   display: block;
@@ -542,8 +575,13 @@ header {
 }
 
 .blogs {
-  padding-top: 143px;
-  padding-bottom: 141px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 143px;
+    padding-bottom: 141px;
+  }
 }
 .blogs .blogs-title {
   margin-bottom: 21px;
@@ -556,13 +594,15 @@ header {
   color: var(--title-color);
 }
 .blogs .blogs-info {
-  width: 589px;
   margin: auto;
   font-size: 22px;
   line-height: 1.5;
   letter-spacing: 0.01em;
   text-align: center;
   color: var(--info-color);
+  @media screen and (min-width: 1200px) {
+    width: 589px;
+  }
 }
 .blogs .blogs-list {
   display: flex;
@@ -572,10 +612,14 @@ header {
   row-gap: 40px;
 }
 .blogs .blogs-list .blogs-item {
-  padding: 21px 21px 40px;
+  padding: 10px 10px 20px;
   border: 1px solid #e7e7e7;
-  border-radius: 62px;
-  flex-basis: calc((100% - 2 * 20px) / 3);
+  border-radius: 32px;
+  @media screen and (min-width: 1200px) {
+    padding: 21px 21px 40px;
+    border-radius: 62px;
+    flex-basis: calc((100% - 2 * 20px) / 3);
+  }
 }
 .blogs .blogs-list .blogs-item .type-container {
   position: relative;
@@ -617,15 +661,22 @@ header {
   width: 52px;
   height: 52px;
 }
+
 .contact {
   padding-bottom: 80px;
 }
 .contact .container {
-  width: 1200px;
-  padding-top: 100px;
-  padding-bottom: 95px;
-  border-radius: 70px;
+  width: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 30px;
   background: var(--title-color);
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-top: 100px;
+    padding-bottom: 95px;
+    border-radius: 70px;
+  }
 }
 .contact .contact-title {
   font-family: var(--second-family);
@@ -662,6 +713,8 @@ header {
 }
 
 footer .container {
+  outline: 1px red solid !important;
+
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -687,17 +740,26 @@ footer .container .social-media .icon:hover {
   fill: var(--main-color);
 }
 footer .container .footer-list {
-  display: flex;
-  column-gap: 76px;
+  display: block;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    column-gap: 76px;
+  }
 }
 footer .container .footer-list .footer-item {
-  flex-basis: calc((100% - 3 * 76px) / 3);
+  margin-top: 30px;
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 3 * 76px) / 3);
+  }
 }
 footer .container .footer-list .footer-item .explore {
   width: 150px;
 }
 footer .container .footer-list .second-item {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 30px;
+  }
 }
 footer .container .footer-list .second-item .item-title {
   font-family: var(--second-family);
@@ -720,7 +782,9 @@ footer .container .footer-list .second-item .item-link:hover {
 }
 footer .container .footer-list .second-item .location {
   display: block;
-  width: 321px;
+  @media screen and (min-width: 1200px) {
+    width: 321px;
+  }
 }
 footer .copyright {
   display: block;
